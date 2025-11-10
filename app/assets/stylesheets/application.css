@@ -42,3 +42,53 @@ body {
 .text-3 {
     margin: 33px;
 }
+
+.box-index1 {
+    width: 148px;
+    padding: 1px 5px 7px;
+}
+
+.box-index2 {
+    width: 398px;
+    padding: 1px 5px 7px;
+}
+
+.index-s {
+    padding: 1px 5px 7px;
+}
+
+.index-e {
+    padding: 1px 5px 7px;
+}
+
+.index-d {
+    padding: 1px 5px 7px;
+}
+
+/*index*/
+
+.index-title {
+    margin: 33px 0;
+}
+
+.form-title {
+    margin: 16.185px 0;
+}
+
+.new-book-title {
+    padding: 1px 2px;
+}
+
+.new-book-body {
+    padding: 1px;
+    margin: 0px 0px 10px;
+}
+
+.new-book-submit {
+
+}
+
+.notice {
+    color: #008000;
+    margin: 33px;
+}

@@ -1,15 +1,44 @@
-<h1>Books</h1>
+<h2 class="index-title">Books</h2>
 
-<% @books.each do |book| %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
 
-  <p>Title</p>
-  <span><%= book.title %></span>
+        <td class="index-s"><%= link_to 'Show', book %></td>
+        <td class="index-e"><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td class="index-d"><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
 
-  <p>Body</p>
-  <span><%= book.body %></span>
+<h2 class="form-title">New book</h2>
+<% if @book.errors.any? %>
+<%= @book.errors.count %>件のエラーが発生しました。
+<ul>
+<% @book.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+  </ul>
+  <% end %>
 
-  <span>
-    <%= link_to book.title, book_path(book.id) %>
-  </span>
+<%= form_with model: @book, url: "/books", method: :post do |f| %>
   
+  <h4>Title</h4>
+  <div  class="new-book-title"><%= f.text_field :title %></div>
+	
+  <h4>Body</h4>
+  <div class="new-book-body"><%= f.text_area :body %></div>
+
+	<div class="new-book-submit"><%= f.submit 'Create Book' %><div>
 <% end %>
