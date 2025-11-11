@@ -24,6 +24,8 @@ a:link {
     color: #666666;
 }
 
+/*top.html.erb*/
+
 body {
     margin: 33px;
 }
@@ -65,7 +67,7 @@ body {
     padding: 1px 5px 7px;
 }
 
-/*index*/
+/*index.html.erb*/
 
 .index-title {
     margin: 33px 0;
@@ -87,4 +89,30 @@ body {
 .notice {
     color: #008000;
     margin: 33px;
+}
+
+/*show.html.erb*/
+
+.show-title {
+    display: flex;
+    margin: 33px;
+}
+
+.show-body {
+    display: flex;
+    margin: 33px;
+}
+
+/*edit.html.erb*/
+
+.edit-h1 {
+    margin: 17.42px 0;
+}
+
+.edit-body {
+    margin: 0 0 10px;
+}
+
+.edit-button {
+    padding: 1px 6px;
 }
